@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: landing
+    database: SLEEKMART_OMS
+    schema: L1_LANDING
+
+    config:
+      loaded_at_field: updated_at
+      freshness: null
+
+    tables:
+      - name: cust
+        identifier: customers
+        description: "Landing customers table from OMS"
+
+      - name: orders
+        identifier: orders
+        description: "Landing orders table from OMS"
+
+      - name: orderitems
+        identifier: orderitems
+        description: "Landing order items table from OMS"
+
+      - name: employees
+        identifier: employees
+        description: "Landing US sales data"
+  
